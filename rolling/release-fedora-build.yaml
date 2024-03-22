@@ -24,12 +24,47 @@ package_ignore_list:
 - rosidl_typesupport_gurumdds_c  # No RPM package for GurumDDS
 - rosidl_typesupport_gurumdds_cpp  # No RPM package for GurumDDS
 - rti_connext_dds_cmake_module  # No RPM package for Connext
-target_repository: http://example.com/fedora/building
+repositories:
+  keys:
+  - |
+    -----BEGIN PGP PUBLIC KEY BLOCK-----
+
+    mQINBGJOBmMBEADBYm9m9TaNLQeQNT/t4L/iNiTtlsgWiEO2X8Udyjw9pD2bENK3
+    qu1QSPqO0OMBXBbV9TKzJDMDHa+yQaYTcIOMncJg/8vL8x12KF/eOg51TyhZshRQ
+    923PpfXK8pDECo03P7CPZtBrk1HKoDrtVNe71VIMpBOR0ebTGdchROs8rDXTCuCu
+    SC5W8Bn9hz3HYf6IhzCVr2pCujWDsBwjNzNDwIzNCGjOUSezlERAgQrSD58wf95z
+    KTwpZ4O6CPZcxtVOC+IN9oR2JnwuRKsGfCprWFFs3YVxBvPnP+IGbKi/tnmuDXcP
+    W7f3Cyz7qZMDY0JrrewFIiFhJ2pZ5OJx+fTp/3K1RXRBfcV7Hjrx4V6+jzprNJjd
+    OSmU+gdTD7KKcEt3aS8worzmWLSokZO7uROjdej8pK1nWMMrceVQNp32+JftvcHF
+    JeUHBvm6Qa7r62o0H1wWysIHu0otbIkErQ/jFwnvlwElC4kjc+ejCpFb3/VyuPBc
+    /9PhnMGEKbBXJlGb5pu/K2Xn7r71xG257HFyw2WrS9s3tiFFuiDFbihEeW/E21jP
+    1FuGBJIfFMpeIVga8U3rvo7+q9OonkJJrZ7lZwoYhiedOAQJhxFRkiN+DDc12sXx
+    6+2cirJe59T+izTE8xR438MVOiWwM3HHBq/eyyCgQLuqyMRwkc4l/sq+7QARAQAB
+    tEdST1MgQnVpbGRmYXJtIFNUQUdJTkcgKFJPUyBCdWlsZGZhcm0gU1RBR0lORykg
+    PHN0ZXZlbkBvcGVucm9ib3RpY3Mub3JnPokCWAQTAQgAQhYhBAbIg7AUq8DskeX9
+    paNAfOsvbHd2BQJiTgZjAhsDBQkDwmcABQsJCAcCAyICAQYVCgkICwIEFgIDAQIe
+    BwIXgAAKCRCjQHzrL2x3drYjEAC+MwxXTPs8TlOMWRrzhBp1gdojN7KLLT5a0NCa
+    1O8AnUfXJqL9L0U3bFtTMlByuGdhPk7w5cDjULBsP12ucN9pIlRYzmqdRz7qOeVh
+    IE6EzyV3LhnxPeJ21VPRJwHFu3WDPEBAKmE00LHBc6dACSGZ+d9FJj+jafiVg41H
+    QecEwWmZxh36/2R3PBQVJ6ZqTJSMVw+qEtkIyrGGbkqsT1mRJ4u8WqqsR7XWtFHT
+    wC7tlY+BdZvi96Fo2tA21GhvAS3p+nNkd/ENCkdd3LNihnpU10+Qh9zYOw2RNcPy
+    HqcRod4RVX7sF1Xb1L8WJ0GtYQj+UB54CEXnK+JUlub3tMNWTnJ3NRpEf4FEAElK
+    BunqJsXE5Rda03W5oTk/FxCpqV8iFozVSJ5xWyWMAf9aJDDd6o1dvrJthEDxIrsR
+    1HivnL5JGYjNGJJlZ0rRZD924L9AKEihIjU5EexO3/vummKM/BvgG0zRXkvpj97u
+    rKr/a31DHH91xqchK052gXi3uTBCDRnD5hyVdsmbyilafYI04pb9qqDzemnQOtz7
+    kOfOCoSqQsiBF7Hm4hY19RWPA+/Ots42Wh+obMdQqbTk0m76L6mpG1hFtdB8Uvek
+    jn3hzZ5mkQyiv/0znHjDmb23pPucHZMyNrmUjH4RHMRnitpgY7++wx3YtJ2gmheX
+    B5JkMg==
+    =H5Nx
+    -----END PGP PUBLIC KEY BLOCK-----
+  urls:
+  - http://repo.test.ros2.org/fedora/building/$releasever/$basearch/
+target_repository: http://repo.test.ros2.org/fedora/building
 targets:
   fedora:
     '39':
       x86_64:
 type: release-build
 upload_credential_id: jenkins-agent
-upload_host: example.com
+upload_host: repo.test.ros2.org
 version: 2
