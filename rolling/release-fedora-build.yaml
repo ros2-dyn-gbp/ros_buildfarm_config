@@ -4,6 +4,7 @@
 abi_incompatibility_assumed: true
 
 package_dependency_behavior:
+  include_group_dependencies: true
   include_test_dependencies: false
   run_package_tests: false
 package_ignore_list:
