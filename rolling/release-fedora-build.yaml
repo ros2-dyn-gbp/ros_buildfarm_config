@@ -7,6 +7,68 @@ package_dependency_behavior:
   include_group_dependencies: true
   include_test_dependencies: false
   run_package_tests: false
+package_blacklist:
+- acado_vendor  # Build failure: Missing dependency on git
+- ament_download  # Packaging failure: Ambiguous Python shebang
+- apriltag_detector  # Build failure: ROS_VERSION is not set
+- aruco_opencv  # Build failure: Incompatibility with OpenCV
+- automotive_autonomy_msgs  # Build failure: Missing dependency on ament_cmake
+- behaviortree_cpp  # Build failure: Could not find GTest
+- cartographer  # Build failure: Incompatibility with Abseil
+- cmake_generate_parameter_module_example  # Build failure: Attempts installation during build
+- control_box_rst  # Build failure: Incompatibility with Eigen
+- dynamic_edt_3d  # Packaging failure: Installs RPATHs
+- ecl_io  # Build failure: Hard-coded -Werror
+- ecl_time_lite  # Build failure: Hard-coded -Werror
+- eigenpy  # Build failure: Insufficient system resources
+- event_camera_codecs  # Build failure: Missing dependency on ament_cmake_auto
+- fields2cover  # Build failure: Could not find Boost
+- find_object_2d  # Build failure: Could not find ZLIB
+- four_wheel_steering_msgs  # Packaging failure: Incorrectly marked 'NoArch'
+- foxglove_bridge  # Build failure: Missing dependency on rclcpp
+- fuse_constraints  # Build failure: Could not find glog
+- gtsam  # Build failure: Insufficient system resources
+- hardware_interface  # Build failure: Missing dependency on rmw_dds_common
+- ifm3d_core  # Build failure: Incompatibility with GTest
+- kinematics_interface  # Build failure: Missing dependency on fastrtps_cmake_module (or more likely, rosidl_default_*)
+- lely_core_libraries  # Build failure: Hard-coded -Werror
+- libcaer  # Packaging failure: Installs RPATHs
+- libpointmatcher  # Build failure: Insufficient system resources
+- mavlink  # Build failure: Could not find Python 2 interpreter
+- metavision_driver  # Build failure: Missing dependency on ament_cmake_auto
+- microstrain_inertial_driver  # Build failure: Insufficient system resources
+- mqtt_client_interfaces  # Build failure: Missing dependency on ament_cmake
+- mrpt2  # Missing dependency: wxGTK3-devel
+- mrt_cmake_modules  # Build failure: Missing dependency on ament_cmake_core
+- octomap_server  # Packaging failure: Ambiguous Python shebang
+- octovis  # Packaging failure: Installs RPATHs
+- odri_master_board_sdk  # Build failure: Incompatibility with default C++ standard
+- ompl  # Packaging failure: Installs RPATHs
+- open3d_conversions  # Missing dependency: libopen3d-dev
+- openni2_camera  # Build failure: Could not find openni2
+- osqp_vendor  # Build failure: Missing dependency on ament_cmake
+- pal_statistics  # Build failure: Incompatibility with default C++ standard
+- performance_test  # Build failure: Insufficient system resources
+- plotjuggler  # Build failure: Could not find Qt5WebSockets
+- qpoases_vendor  # Build failure: Unable to download sources
+- rc_genicam_api  # Packaging failure: Installs RPATHs
+- rmf_traffic  # Build failure: Could not find CCD
+- robot_calibration  # Build failure: Could not find assimp
+- ros2_ouster  # Build failure: Could not find pcap
+- ros2_socketcan  # Build failure: Missing header includes
+- rosbag2_performance_benchmarking_msgs  # Build failure: Does not install anything
+- sophus  # Build failure: Insufficient system resources
+- srdfdom  # Packaging failure: Ambiguous Python shebang
+- tinyspline_vendor  # Build failure: Unknown failure during install
+- turbojpeg_compressed_image_transport  # Build failure: Could not find JPEG
+- tvm_vendor  # Build failure: Missing dependency on ament_cmake
+- usb_cam  # Build failure: Missing dependency on ament_cmake_auto
+- visp  # Build failure: Insufficient system resources
+- vrpn_mocap  # Build failure: Could not find VRPN
+- webots_ros2_driver  # Build failure: Requires specific Python ABI
+- wiimote  # Missing dependency: cwiid-dev
+- zenoh_bridge_dds  # Build failure: Unknown Rust compilation error
+- zmqpp_vendor  # Build failure: Could not find zmqpp-static
 package_ignore_list:
 - connext_cmake_module  # No RPM package for Connext
 - demo_nodes_cpp_native_gurumdds  # No RPM package for GurumDDS
