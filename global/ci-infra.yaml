@@ -101,6 +101,8 @@ repositories:
   - http://repos.ros.org/repos/ros_bootstrap
 targets:
   ubuntu:
+    jammy:
+      amd64:
     noble:
       amd64:
 type: ci-build
