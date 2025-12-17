@@ -1,0 +1,37 @@
+%YAML 1.1
+# ROS buildfarm doc-build file
+---
+documentation_type: make_target
+doc_repositories:
+- https://github.com/ros-infrastructure/catkin_pkg.git
+- https://github.com/ros-infrastructure/rosdep.git
+- https://github.com/ros-infrastructure/rosdistro.git
+- https://github.com/ros-infrastructure/rospkg.git
+- https://github.com/vcstools/rosinstall.git
+- https://github.com/vcstools/vcstools.git
+install_apt_packages:
+- python3-catkin-pkg-modules
+- python3-dateutil
+- python3-wstool
+- python3-yaml
+- python3-sphinx
+- python3-sphinx-rtd-theme
+- python3-catkin-sphinx
+install_pip_packages:
+- xmlschema
+jenkins_job_priority: 80
+jenkins_job_timeout: 30
+notifications:
+  emails:
+  - ros-buildfarm@googlegroups.com
+# Targets are not used for this build file.
+targets:
+  ubuntu:
+    focal:
+      amd64:
+type: doc-build
+upload_credential_id: rosdocs
+upload_host: docs.ros.org
+upload_root: /var/www/docs.ros.org/en
+upload_user: rosdocs
+version: 2
