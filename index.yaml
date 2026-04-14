@@ -5,7 +5,7 @@ distributions:
   rolling:
     release_builds:
       rhel: rolling/release-rhel-build.yaml
-jenkins_url: https://build.ros2.org
+jenkins_url: https://build.test.ros2.org
 prerequisites:
   debian_repositories:
   - http://repo.test.ros2.org/ubuntu/building
