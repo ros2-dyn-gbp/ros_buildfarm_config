@@ -136,6 +136,8 @@ targets:
   rhel:
     '9':
       x86_64:
+    '10':
+      x86_64:
 type: release-build
 upload_credential_id: jenkins-agent
 upload_credential_id_pulp: pulp_admin
