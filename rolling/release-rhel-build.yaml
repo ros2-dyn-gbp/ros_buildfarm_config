@@ -73,6 +73,7 @@ package_blacklist:
 - wiimote  # cwiid has no RPM package for RHEL
 - zmqpp_vendor  # Targets 'HEAD' in vendor package
 package_dependency_behavior:
+  include_group_dependencies: true
   include_test_dependencies: false
   run_package_tests: false
 package_ignore_list:
