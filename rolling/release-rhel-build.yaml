@@ -102,8 +102,8 @@ package_ignore_list:
 - rosidlcpp_typesupport_cpp  # Build fails on RHEL
 - rosidlcpp_typesupport_fastrtps_c  # Build fails on RHEL
 - rosidlcpp_typesupport_fastrtps_cpp  # Build fails on RHEL
-- rosidlcpp_typesupport_fastrtps_introspection_c  # Build fails on RHEL
-- rosidlcpp_typesupport_fastrtps_introspection_cpp  # Build fails on RHEL
+- rosidlcpp_typesupport_introspection_c  # Build fails on RHEL
+- rosidlcpp_typesupport_introspection_cpp  # Build fails on RHEL
 - rti_connext_dds_cmake_module  # No RPM package for Connext
 sync:
   package_count: 400
