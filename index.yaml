@@ -4,7 +4,7 @@
 distributions:
   rolling:
     release_builds:
-      rhel: rolling/release-rhel-build.yaml
+      fedora: rolling/release-fedora-build.yaml
 jenkins_url: https://build.test.ros2.org
 prerequisites:
   debian_repositories:

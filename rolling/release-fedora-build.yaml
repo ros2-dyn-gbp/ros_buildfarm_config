@@ -1,0 +1,68 @@
+%YAML 1.1
+# ROS buildfarm release-build file
+---
+abi_incompatibility_assumed: true
+
+build_environment_variables:
+  RPM_BUILD_NCPUS: '1'
+
+jenkins_binary_job_priority: 80
+jenkins_binary_job_timeout: 150
+jenkins_source_job_priority: 70
+jenkins_source_job_timeout: 30
+notifications:
+  maintainers: false
+package_blacklist:
+- wiimote  # cwiid has no RPM package for RHEL
+package_dependency_behavior:
+  include_group_dependencies: true
+  include_test_dependencies: false
+  run_package_tests: false
+package_ignore_list:
+- connext_cmake_module  # No RPM package for Connext
+- demo_nodes_cpp_native_gurumdds  # No RPM package for GurumDDS
+- gurumdds_cmake_module  # No RPM package for GurumDDS
+- rmw_connext_cpp  # No RPM package for Connext
+- rmw_connext_dynamic_cpp  # No RPM package for Connext
+- rmw_connext_shared_cpp  # No RPM package for Connext
+- rmw_connextdds  # No RPM package for Connext
+- rmw_connextddsmicro  # No RPM package for Connext
+- rmw_connextdds_common  # No RPM package for Connext
+- rmw_gurumdds_cpp  # No RPM package for GurumDDS
+- rmw_gurumdds_shared_cpp  # No RPM package for GurumDDS
+- rmw_gurumdds_static_cpp  # No RPM package for GurumDDS
+- rosidl_typesupport_connext_c  # No RPM package for Connext
+- rosidl_typesupport_connext_cpp  # No RPM package for Connext
+- rosidl_typesupport_gurumdds_c  # No RPM package for GurumDDS
+- rosidl_typesupport_gurumdds_cpp  # No RPM package for GurumDDS
+- rosidlcpp_generator_c  # Build fails on RHEL
+- rosidlcpp_generator_cpp  # Build fails on RHEL
+- rosidlcpp_generator_core  # Build fails on RHEL
+- rosidlcpp_generator_py  # Build fails on RHEL
+- rosidlcpp_generator_type_description  # Build fails on RHEL
+- rosidlcpp_typesupport_c  # Build fails on RHEL
+- rosidlcpp_typesupport_cpp  # Build fails on RHEL
+- rosidlcpp_typesupport_fastrtps_c  # Build fails on RHEL
+- rosidlcpp_typesupport_fastrtps_cpp  # Build fails on RHEL
+- rosidlcpp_typesupport_introspection_c  # Build fails on RHEL
+- rosidlcpp_typesupport_introspection_cpp  # Build fails on RHEL
+- rti_connext_dds_cmake_module  # No RPM package for Connext
+sync:
+  package_count: 400
+  packages: [desktop]
+repositories:
+  keys:
+  - ''
+  urls:
+  - http://repo.test.ros2.org/fedora/building/$releasever/$basearch/
+target_repository: http://repo.test.ros2.org/fedora/building
+targets:
+  fedora:
+    '43':
+      x86_64:
+type: release-build
+upload_credential_id: jenkins-agent
+upload_credential_id_pulp: pulp_admin
+upload_destination_credential_id: pulp_base_url
+upload_host: repo.test.ros2.org
+version: 2
