@@ -13,7 +13,60 @@ jenkins_source_job_timeout: 30
 notifications:
   maintainers: false
 package_blacklist:
+- acado_vendor  # build fails due to missing buildtool_depend on git
+- adaptive_component  # build fails due to ament_target_dependencies
+- ament_black  # python3-uvloop has no RPM package on Fedora
+- ament_download  # build fails due to ambiguous python shebang
+- gz_common_vendor  # build fails due to missing libz.so
+- moveit_ros_tests  # build fails due to nothing installed
+- mqtt_client  # build fails due to ament_target_dependencies
+- mrpt_libbase  # build fails due to missing buildtool_depend on git
+- mrt_cmake_modules  # build fails due to ambiguous python shebang
+- mujoco_vendor  # build fails due to missing build IDs
+- nanoeigenpy  # nanobind has no RPM package for Fedora
+- nao_lola_client  # build fails due to ament_target_dependencies
+- odri_master_board_sdk  # build fails due to bad RPATHs
+- orocos_kdl_vendor  # orocos-kdl-devel is not packaged
+- pcl_conversions  # build fails to find libusb (pcl-devel bug?)
+- performance_test  # build fails due to ament_target_dependencies
+- picknik_reset_fault_controller  # build fails due to ament_target_dependencies
+- picknik_twist_controller  # build fails due to ament_target_dependencies
+- pinocchio  # references non-existant package 'hpp-fcl'
+- plotjuggler  # pending ros/rosdistro#51453
+- polygon_rviz_plugins  # build fails to find Qt5
+- qpoases_vendor  # build fails due to vanished upstream URL
+- raspimouse  # build fails due to ament_target_dependencies
+- rc_genicam_api  # build fails due to bad RPATHs
+- rclc_examples  # build fails due to compiler warning?
+- rcss3d_agent  # build fails due to ament_target_dependencies
+- rcss3d_agent_msgs_to_soccer_interfaces  # build fails due to ament_target_dependencies
+- rmf_traffic  # pending ros/rosdistro#51452
+- rmf_visualization_floorplans  # build fails, possible opencv version incompatibility
+- robotiq_controllers  # build fails due to ament_target_dependencies
+- ros2launch_security_examples  # build fails due to ament_target_dependencies
+- ros_image_to_qimage  # build fails due to ament_target_dependencies
+- rot_conv  # build fails due to ament_target_dependencies
+- rplidar  # build fails due to ament_target_dependencies
+- rt_manipulators_cpp  # build fails due to ament_target_dependencies
+- rtsp_image_transport  # build fails, possible libavcodec version incompatibility
+- rt_usb_9axisimu_driver  # build fails due to ament_target_dependencies
+- simple_launch  # build fails to find ament_cmake (due to runtime split?)
+- snowbot_operating_system  # build fails to find Qt5
+- sophus  # build fails to find glog (suitesparse bug?)
+- spinnaker_camera_driver  # build fails in CMake logic
+- system_modes  # build fails due to ament_target_dependencies
+- system_webview  # cpp-httplib-devel doesn't provide pkg-config
+- tf2_eigen_kdl  # orocos-kdl-devel is not packaged
+- tf2_geometry_msgs  # orocos-kdl-devel is not packaged
+- tf2_kdl  # orocos-kdl-devel is not packaged
+- turbojpeg_compressed_image_transport  # pending ros/rosdistro#51451
+- usb_cam  # pending ros/rosdistro#51450
+- velodyne_pointcloud  # build fails due to missing tf2/LinearMath/Quaternion.h
+- vision_msgs_layers  # build fails due to ament_target_dependencies
+- vrpn_mocap  # build fails, possibly lib64 issue
 - wiimote  # cwiid has no RPM package for RHEL
+- zbar_ros  # build fails due to ament_target_dependencies
+- zmqpp_vendor  # build fails due to BUILD_SHARED_LIBS
 package_dependency_behavior:
   include_group_dependencies: true
   include_test_dependencies: false
