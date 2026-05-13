@@ -21,7 +21,6 @@ package_blacklist:
 - azure_iot_sdk_c  # build fails during linking with lto-wrapper
 - broll  # build fails to find libavcodec (missing FindPackage?)
 - cartographer  # build fails during compilation
-- coal  # pending ros/rosdistro#51468
 - control_box_rst  # build fails (eigen incompatibility?)
 - cx_utils  # build fails due to ament_target_dependencies
 - dynamixel_hardware  # build fails due to ament_target_dependencies
