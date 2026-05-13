@@ -17,6 +17,14 @@ package_blacklist:
 - adaptive_component  # build fails due to ament_target_dependencies
 - ament_black  # python3-uvloop has no RPM package on Fedora
 - ament_download  # build fails due to ambiguous python shebang
+- automatika_ros_sugar  # python3-msgpack-numpy has no RPM package on Fedora
+- azure_iot_sdk_c  # build fails during linking with lto-wrapper
+- broll  # build fails to find libavcodec (missing FindPackage?)
+- cartographer  # build fails during compilation
+- coal  # pending ros/rosdistro#51468
+- control_box_rst  # build fails (eigen incompatibility?)
+- cx_utils  # build fails due to ament_target_dependencies
+- dynamixel_hardware  # build fails due to ament_target_dependencies
 - gz_common_vendor  # build fails due to missing libz.so
 - moveit_ros_tests  # build fails due to nothing installed
 - mqtt_client  # build fails due to ament_target_dependencies
