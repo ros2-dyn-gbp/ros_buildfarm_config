@@ -21,19 +21,44 @@ package_blacklist:
 - azure_iot_sdk_c  # build fails during linking with lto-wrapper
 - broll  # build fails to find libavcodec (missing FindPackage?)
 - cartographer  # build fails during compilation
+- coal  # build fails due to missing libz.so
 - control_box_rst  # build fails (eigen incompatibility?)
 - cx_utils  # build fails due to ament_target_dependencies
 - dynamixel_hardware  # build fails due to ament_target_dependencies
 - ecl_io  # build fails due to Werror
-- feetech_driver  # libserial-dev has no RPM package on Fedora
+- ecl_time  # build fails due to Werror
+- eiquadprog  # build fails during install (missing doc dependency?)
+- feetech_ros2_driver  # libserial-dev has no RPM package on Fedora
+- ffw_joint_trajectory_command_broadcaster  # build fails during compile
+- four_wheel_steering_msgs  # incorrectly marked as architecture_independent
+- fuse_graphs  # build fails to find glog (ceres bug?)
+- fuse_loss  # build fails to find glog (ceres bug?)
+- fuse_variables  # build fails to find glog (ceres bug?)
+- geodesy  # build fails due to ament_target_dependencies
+- gtsam  # build fails to find Boost during configure (TODO: check rosdep rules)
 - gz_common_vendor  # build fails due to missing libz.so
-- nao_lola  # build fails due to ament_target_dependencies
+- hri  # build fails to find magic_enum.hpp
+- ifm3d_core  # build fails when trying to use /usr/src/gtest
+- io_context  # build fails due to ament_target_dependencies
+- kdl_parser  # orocos-kdl-devel is not packaged
+- kinematics_interface  # build fails to find ament_cmake_ros_core (ament_cmake_export_dependencies bug?)
+- kortex_driver  # build fails due to ament_target_dependencies
+- lely_core_libraries  # build fails compiling with unknown 'Wno-static-in-inline'
+- leo_fw  # python3-whichcraft has no RPM package on Fedora
+- libcaer_vendor  # build fails due to bad RPATHs
+- libg2o  # build fails during CMake due to missing CCOLAMD
+- librealsense2  # build fails due to files installed outside of /opt/ros
+- mavlink  # python3-future has no RPM package on Fedora
+- micro_ros_diagnostic_bridge  # build fails due to ament_target_dependencies
+- mimick_vendor  # build fails due to source fortification
+- motion_capture_tracking  # build fails to find libusb (pcl-devel bug?)
 - moveit_ros_tests  # build fails due to nothing installed
 - mqtt_client  # build fails due to ament_target_dependencies
 - mrpt_libbase  # build fails due to missing buildtool_depend on git
 - mrt_cmake_modules  # build fails due to ambiguous python shebang
 - mujoco_vendor  # build fails due to missing build IDs
 - nanoeigenpy  # nanobind has no RPM package for Fedora
+- nao_lola  # build fails due to ament_target_dependencies
 - nao_lola_client  # build fails due to ament_target_dependencies
 - odri_master_board_sdk  # build fails due to bad RPATHs
 - ompl  # build fails due to bad RPATHs
@@ -44,6 +69,7 @@ package_blacklist:
 - picknik_reset_fault_controller  # build fails due to ament_target_dependencies
 - picknik_twist_controller  # build fails due to ament_target_dependencies
 - pinocchio  # references non-existant package 'hpp-fcl'
+- plotjuggler  # build fails during compilation
 - polygon_rviz_plugins  # build fails to find Qt5
 - qpoases_vendor  # build fails due to vanished upstream URL
 - raspimouse  # build fails due to ament_target_dependencies
@@ -51,6 +77,7 @@ package_blacklist:
 - rclc_examples  # build fails due to compiler warning?
 - rcss3d_agent  # build fails due to ament_target_dependencies
 - rcss3d_agent_msgs_to_soccer_interfaces  # build fails due to ament_target_dependencies
+- rmf_traffic  # build fails during compilation (missing cstdint.h?)
 - rmf_visualization_floorplans  # build fails, possible opencv version incompatibility
 - robotiq_controllers  # build fails due to ament_target_dependencies
 - robotraconteur  # build fails due to bad RPATHs
@@ -71,6 +98,7 @@ package_blacklist:
 - tf2_geometry_msgs  # orocos-kdl-devel is not packaged
 - tf2_kdl  # orocos-kdl-devel is not packaged
 - tvm_vendor  # build fails due to missing cblas.h
+- usb_cam  # build fails to find libavcodec (missing FindPackage?)
 - velodyne_pointcloud  # build fails due to missing tf2/LinearMath/Quaternion.h
 - vision_msgs_layers  # build fails due to ament_target_dependencies
 - vrpn_mocap  # build fails, possibly lib64 issue
