@@ -27,6 +27,7 @@ package_blacklist:
 - dynamixel_hardware  # build fails due to ament_target_dependencies
 - ecl_io  # build fails due to Werror
 - ecl_time  # build fails due to Werror
+- ecl_time_lite  # build fails due to Werror
 - eiquadprog  # build fails during install (missing doc dependency?)
 - feetech_ros2_driver  # libserial-dev has no RPM package on Fedora
 - ffw_joint_trajectory_command_broadcaster  # build fails during compile
