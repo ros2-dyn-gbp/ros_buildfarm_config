@@ -50,7 +50,6 @@ package_blacklist:
 - librealsense2  # build fails due to files installed outside of /opt/ros
 - mavlink  # python3-future has no RPM package on Fedora
 - micro_ros_diagnostic_bridge  # build fails due to ament_target_dependencies
-- mimick_vendor  # build fails due to source fortification
 - motion_capture_tracking  # build fails to find libusb (pcl-devel bug?)
 - moveit_ros_tests  # build fails due to nothing installed
 - mqtt_client  # build fails due to ament_target_dependencies
