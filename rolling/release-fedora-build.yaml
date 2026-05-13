@@ -32,7 +32,6 @@ package_blacklist:
 - picknik_reset_fault_controller  # build fails due to ament_target_dependencies
 - picknik_twist_controller  # build fails due to ament_target_dependencies
 - pinocchio  # references non-existant package 'hpp-fcl'
-- plotjuggler  # pending ros/rosdistro#51453
 - polygon_rviz_plugins  # build fails to find Qt5
 - qpoases_vendor  # build fails due to vanished upstream URL
 - raspimouse  # build fails due to ament_target_dependencies
@@ -40,7 +39,6 @@ package_blacklist:
 - rclc_examples  # build fails due to compiler warning?
 - rcss3d_agent  # build fails due to ament_target_dependencies
 - rcss3d_agent_msgs_to_soccer_interfaces  # build fails due to ament_target_dependencies
-- rmf_traffic  # pending ros/rosdistro#51452
 - rmf_visualization_floorplans  # build fails, possible opencv version incompatibility
 - robotiq_controllers  # build fails due to ament_target_dependencies
 - ros2launch_security_examples  # build fails due to ament_target_dependencies
@@ -59,8 +57,6 @@ package_blacklist:
 - tf2_eigen_kdl  # orocos-kdl-devel is not packaged
 - tf2_geometry_msgs  # orocos-kdl-devel is not packaged
 - tf2_kdl  # orocos-kdl-devel is not packaged
-- turbojpeg_compressed_image_transport  # pending ros/rosdistro#51451
-- usb_cam  # pending ros/rosdistro#51450
 - velodyne_pointcloud  # build fails due to missing tf2/LinearMath/Quaternion.h
 - vision_msgs_layers  # build fails due to ament_target_dependencies
 - vrpn_mocap  # build fails, possibly lib64 issue
