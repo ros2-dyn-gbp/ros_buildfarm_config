@@ -25,7 +25,10 @@ package_blacklist:
 - control_box_rst  # build fails (eigen incompatibility?)
 - cx_utils  # build fails due to ament_target_dependencies
 - dynamixel_hardware  # build fails due to ament_target_dependencies
+- ecl_io  # build fails due to Werror
+- feetech_driver  # libserial-dev has no RPM package on Fedora
 - gz_common_vendor  # build fails due to missing libz.so
+- nao_lola  # build fails due to ament_target_dependencies
 - moveit_ros_tests  # build fails due to nothing installed
 - mqtt_client  # build fails due to ament_target_dependencies
 - mrpt_libbase  # build fails due to missing buildtool_depend on git
@@ -34,6 +37,8 @@ package_blacklist:
 - nanoeigenpy  # nanobind has no RPM package for Fedora
 - nao_lola_client  # build fails due to ament_target_dependencies
 - odri_master_board_sdk  # build fails due to bad RPATHs
+- ompl  # build fails due to bad RPATHs
+- openeb_vendor  # build fails due to bad RPATHs
 - orocos_kdl_vendor  # orocos-kdl-devel is not packaged
 - pcl_conversions  # build fails to find libusb (pcl-devel bug?)
 - performance_test  # build fails due to ament_target_dependencies
@@ -49,10 +54,11 @@ package_blacklist:
 - rcss3d_agent_msgs_to_soccer_interfaces  # build fails due to ament_target_dependencies
 - rmf_visualization_floorplans  # build fails, possible opencv version incompatibility
 - robotiq_controllers  # build fails due to ament_target_dependencies
+- robotraconteur  # build fails due to bad RPATHs
 - ros2launch_security_examples  # build fails due to ament_target_dependencies
 - ros_image_to_qimage  # build fails due to ament_target_dependencies
 - rot_conv  # build fails due to ament_target_dependencies
-- rplidar  # build fails due to ament_target_dependencies
+- rplidar_ros  # build fails due to ament_target_dependencies
 - rt_manipulators_cpp  # build fails due to ament_target_dependencies
 - rtsp_image_transport  # build fails, possible libavcodec version incompatibility
 - rt_usb_9axisimu_driver  # build fails due to ament_target_dependencies
@@ -65,11 +71,13 @@ package_blacklist:
 - tf2_eigen_kdl  # orocos-kdl-devel is not packaged
 - tf2_geometry_msgs  # orocos-kdl-devel is not packaged
 - tf2_kdl  # orocos-kdl-devel is not packaged
+- tvm_vendor  # build fails due to missing cblas.h
 - velodyne_pointcloud  # build fails due to missing tf2/LinearMath/Quaternion.h
 - vision_msgs_layers  # build fails due to ament_target_dependencies
 - vrpn_mocap  # build fails, possibly lib64 issue
 - wiimote  # cwiid has no RPM package for RHEL
 - zbar_ros  # build fails due to ament_target_dependencies
+- zenoh_bridge_dds  # build fails due to rust panic during install
 - zmqpp_vendor  # build fails due to BUILD_SHARED_LIBS
 package_dependency_behavior:
   include_group_dependencies: true
