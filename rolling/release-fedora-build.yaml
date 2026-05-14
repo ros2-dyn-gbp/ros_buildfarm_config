@@ -17,12 +17,14 @@ package_blacklist:
 - adaptive_component  # build fails due to ament_target_dependencies
 - ament_black  # python3-uvloop has no RPM package on Fedora
 - ament_download  # build fails due to ambiguous python shebang
+- aruco_ros  # build fails due to ament_target_dependencies
 - automatika_ros_sugar  # python3-msgpack-numpy has no RPM package on Fedora
 - azure_iot_sdk_c  # build fails during linking with lto-wrapper
 - broll  # build fails to find libavcodec (missing FindPackage?)
 - cartographer  # build fails during compilation
 - coal  # build fails due to missing libz.so
 - control_box_rst  # build fails (eigen incompatibility?)
+- cuda_buffer  # nvidia-cuda has no RPM package on Fedora
 - cx_utils  # build fails due to ament_target_dependencies
 - dynamixel_hardware  # build fails due to ament_target_dependencies
 - ecl_io  # build fails due to Werror
@@ -35,6 +37,7 @@ package_blacklist:
 - fuse_graphs  # build fails to find glog (ceres bug?)
 - fuse_loss  # build fails to find glog (ceres bug?)
 - fuse_variables  # build fails to find glog (ceres bug?)
+- generate_parameter_library  # references non-existant package 'tl_expected' 
 - geodesy  # build fails due to ament_target_dependencies
 - gz_common_vendor  # build fails due to missing libz.so
 - hri  # build fails to find magic_enum.hpp
@@ -47,8 +50,10 @@ package_blacklist:
 - libcaer_vendor  # build fails due to bad RPATHs
 - libg2o  # build fails during CMake due to missing CCOLAMD
 - librealsense2  # build fails due to files installed outside of /opt/ros
+- libtorch_vendor  # build fails due to foreign binaries 
 - mavlink  # python3-future has no RPM package on Fedora
 - micro_ros_diagnostic_bridge  # build fails due to ament_target_dependencies
+- microstrain_inertial_driver  # build fails due to ament_target_dependencies
 - moveit_ros_tests  # build fails due to nothing installed
 - mqtt_client  # build fails due to ament_target_dependencies
 - mrpt_libbase  # build fails due to missing buildtool_depend on git
@@ -57,6 +62,7 @@ package_blacklist:
 - nanoeigenpy  # nanobind has no RPM package for Fedora
 - nao_lola  # build fails due to ament_target_dependencies
 - nao_lola_client  # build fails due to ament_target_dependencies
+- novatel_gps_driver  # build fails due to ament_target_dependencies
 - odri_master_board_sdk  # build fails due to bad RPATHs
 - ompl  # build fails due to bad RPATHs
 - openeb_vendor  # build fails due to bad RPATHs
