@@ -50,7 +50,6 @@ package_blacklist:
 - librealsense2  # build fails due to files installed outside of /opt/ros
 - mavlink  # python3-future has no RPM package on Fedora
 - micro_ros_diagnostic_bridge  # build fails due to ament_target_dependencies
-- motion_capture_tracking  # build fails to find libusb (pcl-devel bug?)
 - moveit_ros_tests  # build fails due to nothing installed
 - mqtt_client  # build fails due to ament_target_dependencies
 - mrpt_libbase  # build fails due to missing buildtool_depend on git
@@ -63,7 +62,6 @@ package_blacklist:
 - ompl  # build fails due to bad RPATHs
 - openeb_vendor  # build fails due to bad RPATHs
 - orocos_kdl_vendor  # orocos-kdl-devel is not packaged
-- pcl_conversions  # build fails to find libusb (pcl-devel bug?)
 - performance_test  # build fails due to ament_target_dependencies
 - picknik_reset_fault_controller  # build fails due to ament_target_dependencies
 - picknik_twist_controller  # build fails due to ament_target_dependencies
