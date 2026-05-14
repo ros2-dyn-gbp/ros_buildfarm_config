@@ -36,13 +36,12 @@ package_blacklist:
 - fuse_loss  # build fails to find glog (ceres bug?)
 - fuse_variables  # build fails to find glog (ceres bug?)
 - geodesy  # build fails due to ament_target_dependencies
-- gtsam  # build fails to find Boost during configure (TODO: check rosdep rules)
 - gz_common_vendor  # build fails due to missing libz.so
 - hri  # build fails to find magic_enum.hpp
 - ifm3d_core  # build fails when trying to use /usr/src/gtest
 - io_context  # build fails due to ament_target_dependencies
 - kdl_parser  # orocos-kdl-devel is not packaged
-- kinematics_interface  # build fails to find ament_cmake_ros_core (ament_cmake_export_dependencies bug?)
+- kinematics_interface  # pending ros-controls/kinematics_interface#289
 - kortex_driver  # build fails due to ament_target_dependencies
 - lely_core_libraries  # build fails compiling with unknown 'Wno-static-in-inline'
 - leo_fw  # python3-whichcraft has no RPM package on Fedora
