@@ -98,6 +98,7 @@ package_blacklist:
 - rt_manipulators_cpp  # build fails due to ament_target_dependencies
 - rtsp_image_transport  # build fails, possible libavcodec version incompatibility
 - rt_usb_9axisimu_driver  # build fails due to ament_target_dependencies
+- sick_safetyscanners2  # build fails due to ament_target_dependencies
 - simple_launch  # build fails to find ament_cmake (due to runtime split?)
 - snowbot_operating_system  # build fails to find Qt5
 - sophus  # build fails to find glog (suitesparse bug?)
