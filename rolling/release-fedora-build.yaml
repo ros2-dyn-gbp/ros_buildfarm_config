@@ -40,7 +40,6 @@ package_blacklist:
 - hri  # build fails to find magic_enum.hpp
 - ifm3d_core  # build fails when trying to use /usr/src/gtest
 - io_context  # build fails due to ament_target_dependencies
-- kdl_parser  # orocos-kdl-devel is not packaged
 - kinematics_interface  # pending ros-controls/kinematics_interface#289
 - kortex_driver  # build fails due to ament_target_dependencies
 - lely_core_libraries  # build fails compiling with unknown 'Wno-static-in-inline'
@@ -61,7 +60,6 @@ package_blacklist:
 - odri_master_board_sdk  # build fails due to bad RPATHs
 - ompl  # build fails due to bad RPATHs
 - openeb_vendor  # build fails due to bad RPATHs
-- orocos_kdl_vendor  # orocos-kdl-devel is not packaged
 - performance_test  # build fails due to ament_target_dependencies
 - picknik_reset_fault_controller  # build fails due to ament_target_dependencies
 - picknik_twist_controller  # build fails due to ament_target_dependencies
@@ -91,9 +89,6 @@ package_blacklist:
 - spinnaker_camera_driver  # build fails in CMake logic
 - system_modes  # build fails due to ament_target_dependencies
 - system_webview  # cpp-httplib-devel doesn't provide pkg-config
-- tf2_eigen_kdl  # orocos-kdl-devel is not packaged
-- tf2_geometry_msgs  # orocos-kdl-devel is not packaged
-- tf2_kdl  # orocos-kdl-devel is not packaged
 - tvm_vendor  # build fails due to missing cblas.h
 - usb_cam  # build fails to find libavcodec (missing FindPackage?)
 - velodyne_pointcloud  # build fails due to missing tf2/LinearMath/Quaternion.h
