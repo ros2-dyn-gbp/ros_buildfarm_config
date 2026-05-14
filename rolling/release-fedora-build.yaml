@@ -17,6 +17,7 @@ package_blacklist:
 - adaptive_component  # build fails due to ament_target_dependencies
 - ament_black  # python3-uvloop has no RPM package on Fedora
 - ament_download  # build fails due to ambiguous python shebang
+- apriltag_ros  # build fails to compile due to missing tf2/convert.h
 - aruco_ros  # build fails due to ament_target_dependencies
 - automatika_ros_sugar  # python3-msgpack-numpy has no RPM package on Fedora
 - azure_iot_sdk_c  # build fails during linking with lto-wrapper
@@ -42,6 +43,7 @@ package_blacklist:
 - gz_common_vendor  # build fails due to missing libz.so
 - hri  # build fails to find magic_enum.hpp
 - ifm3d_core  # build fails when trying to use /usr/src/gtest
+- interactive_marker_twist_server  # build fails due to ament_target_dependencies
 - io_context  # build fails due to ament_target_dependencies
 - kinematics_interface  # pending ros-controls/kinematics_interface#289
 - kortex_driver  # build fails due to ament_target_dependencies
@@ -51,7 +53,9 @@ package_blacklist:
 - libg2o  # build fails during CMake due to missing CCOLAMD
 - librealsense2  # build fails due to files installed outside of /opt/ros
 - libtorch_vendor  # build fails due to foreign binaries 
+- mapviz  # build fails in CMake due to Qt6
 - mavlink  # python3-future has no RPM package on Fedora
+- message_tf_frame_transformer  # build fails due to ament_target_dependencies
 - micro_ros_diagnostic_bridge  # build fails due to ament_target_dependencies
 - microstrain_inertial_driver  # build fails due to ament_target_dependencies
 - moveit_ros_tests  # build fails due to nothing installed
@@ -100,6 +104,7 @@ package_blacklist:
 - velodyne_pointcloud  # build fails due to missing tf2/LinearMath/Quaternion.h
 - vision_msgs_layers  # build fails due to ament_target_dependencies
 - vrpn_mocap  # build fails, possibly lib64 issue
+- webots_ros2_driver  # build fails to find Python 3.12
 - wiimote  # cwiid has no RPM package for RHEL
 - zbar_ros  # build fails due to ament_target_dependencies
 - zenoh_bridge_dds  # build fails due to rust panic during install
