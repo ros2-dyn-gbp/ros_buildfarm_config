@@ -160,9 +160,6 @@ repositories:
   - http://repo.test.ros2.org/fedora/building/$releasever/$basearch/
 target_repository: http://repo.test.ros2.org/fedora/building
 targets:
-  _config:
-    custom_rosdep_urls:
-    - https://raw.githubusercontent.com/cottsay/rosdistro/b46340efbeb1d5e99fa76bfd0c83c0036b9658f3/rosdep/base.yaml
   fedora:
     '43':
       x86_64:
