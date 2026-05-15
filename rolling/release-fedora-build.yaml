@@ -42,7 +42,6 @@ package_blacklist:
 - fuse_variables  # build fails to find glog (ceres bug?)
 - generate_parameter_library  # references non-existant package 'tl_expected' 
 - geodesy  # build fails due to ament_target_dependencies
-- gz_common_vendor  # build fails due to missing libz.so
 - hri  # build fails to find magic_enum.hpp
 - ifm3d_core  # build fails when trying to use /usr/src/gtest
 - interactive_marker_twist_server  # build fails due to ament_target_dependencies
